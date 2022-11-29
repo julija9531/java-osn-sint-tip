@@ -1,0 +1,25 @@
+<p>Loading, please wait...</p>
+<script>
+    let num = Math.floor(Math.random() * 1000);
+    console.log(num);
+
+    var numUser = 1000
+
+    while ((numUser != num)) {
+        numUser = prompt("Угадайте загаданное число от 0 до 999", "");
+        if (isNaN(numUser)) {
+            alert('"' + numUser + '" не является числом')
+        } else {
+            document.write('Вы ввели число: ' + numUser);
+        };
+
+        if (numUser == num) {
+            alert('Поздравляю! Вы угадали!!!')
+        } else if (numUser < num) {
+            alert('Ваше число ' + numUser + ' меньше, чем загаданное')
+        } else {
+            alert('Ваше число ' + numUser + ' больше, чем загаданное')
+        }
+    }
+    
+</script>
